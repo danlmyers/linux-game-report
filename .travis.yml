@@ -1,9 +1,9 @@
 language: python
 python:
-    - 3.4
-
+- 3.4
+env:
+- secure: "B5dCRzeW8h7+vxiO43e4gQ3+dPGOxaW0Tsk1y4K2465HD9aVlw7PGT8xAffBoEtQZE0fh30czICnHYe73nDaeLOr+PjUwHlv84/RyQnwP7+xrwr1HfPR+apSjKzzUr2miO1PJLgFY223ZXx1PPH/z0paVNImtAM3rQYgLHnejqw="
 install:
-    - pip install -r requirements.txt
-
+- pip install -r requirements.txt
 script:
-    - "nosetests --processes=30"
+- nosetests --processes=30

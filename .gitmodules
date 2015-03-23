@@ -1,0 +1,3 @@
+[submodule "SteamLinux"]
+	path = SteamLinux
+	url = git@github.com:SteamDatabase/SteamLinux.git
