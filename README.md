@@ -3,4 +3,5 @@ Will map out the games you have in steam and report which ones are compatable wi
 
 Requires environment:
 
-steam_api_key = <set to your steam api key>
+steam_api_key = set to your steam api key which you can get at the [Steam Community](http://steamcommunity.com/dev/apikey)
+
