@@ -33,9 +33,6 @@ def report(name=None):
             linux_game_list = './assets/GAMES.json'
             winehq_list = './assets/winehq.json'
 
-        app.logger.debug("Using linux game list here: {}".format(linux_game_list))
-
-
         with open(linux_game_list) as linux_game_list_raw:
             linux_games = json.load(linux_game_list_raw)
 

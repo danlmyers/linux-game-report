@@ -10,5 +10,5 @@ app = Flask(__name__)
 import steamcheck.views
 
 file_handler = StreamHandler()
-app.logger.setLevel(logging.DEBUG)
+app.logger.setLevel(logging.INFO)
 app.logger.addHandler(file_handler)
