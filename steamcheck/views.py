@@ -1,5 +1,5 @@
 from steamcheck import app
-from flask import jsonify
+from flask import jsonify, render_template
 import os
 import steamapi
 import json
@@ -7,7 +7,7 @@ import json
 
 @app.route('/')
 def index():
-    return "Hello I am working YAY!"
+    return render_template("index.html")
 
 
 @app.route('/report/<name>')

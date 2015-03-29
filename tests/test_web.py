@@ -10,7 +10,7 @@ class WebTestCase(unittest.TestCase):
 
     def test_root(self):
         rv = self.app.get('/')
-        self.assertIn(u"Hello I am working YAY!", str(rv.data))
+        self.assertIn(u"<!DOCTYPE html>", str(rv.data))
 
     def test_report(self):
         rv = self.app.get('/report/76561198044413311')
