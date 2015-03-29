@@ -25,10 +25,19 @@ def report(name=None):
     """
     process_report = {}
     try:
-        with open('./SteamLinux/GAMES.json') as linux_game_list_raw:
+        # See if we are running on heroku or not.  Could probably set an environment variable for this as well.
+        if os.path.exists('/app/assets/GAMES.json'):
+            linux_game_list = '/app/assets/GAMES.json'
+            winehq_list = '/app/assets/winehq.json'
+        else:
+            linux_game_list = './assets/GAMES.json'
+            winehq_list = './assets/winehq.json'
+
+
+        with open(linux_game_list) as linux_game_list_raw:
             linux_games = json.load(linux_game_list_raw)
 
-        with open('./winehq.json') as winehq_raw:
+        with open(winehq_list) as winehq_raw:
             winehq_apps = json.load(winehq_raw)
 
         steam_connection = steamapi.core.APIConnection(api_key=os.environ['steam_api_key'])
