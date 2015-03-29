@@ -27,6 +27,10 @@ def report(name=None):
     try:
         with open('./SteamLinux/GAMES.json') as linux_game_list_raw:
             linux_games = json.load(linux_game_list_raw)
+
+        with open('./winehq.json') as winehq_raw:
+            winehq_apps = json.load(winehq_raw)
+
         steam_connection = steamapi.core.APIConnection(api_key=os.environ['steam_api_key'])
 
         try:
@@ -40,9 +44,12 @@ def report(name=None):
         process_report['games'] = {}
         for game in user.games:
             linux = False
+            winehq = False
             if str(game.id) in linux_games:
                 linux = True
-            process_report['games'][game.id] = {"name": game.name, "linux": linux}
+            if game.name in winehq_apps:
+                winehq = winehq_apps[game.name]
+            process_report['games'][game.id] = {"name": game.name, "linux": linux, "winehq":winehq}
     except Exception as e:
         process_report['error'] = e
     return jsonify(**process_report)

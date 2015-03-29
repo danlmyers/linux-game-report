@@ -37,10 +37,10 @@ def main():
             items = [td.text_content() for td in tree.xpath('//td')]
 
             for pos in range(3, len(items), 3):
-                results[items[pos + 1]] = {"app": items[pos], "description": items[pos + 2], "rating": rating}
+                results[items[pos]] = {"winehq": items[pos + 1], "description": items[pos + 2], "rating": rating}
 
     with open(winehq_file, 'w') as winehq_raw:
-        json.dump(results, winehq_raw)
+        json.dump(results, winehq_raw, indent=4)
 
 if __name__ == "__main__":
     main()
