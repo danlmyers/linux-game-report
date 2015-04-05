@@ -3,9 +3,28 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Steam Linux App Check</title>
+
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta name="description" content="Get a report of what games in steam you own that work on linux">
+    <meta name="author" content="Moird">
+
+    <link rel="shortcut icon" href="/static/favicon.ico">
+
+    <link rel="stylesheet" href="/static/css/foundation.min.css">
+    <link rel="stylesheet" href="/static/css/lgr.css"
 </head>
 <body>
-    <h1>Steam Linux App Check</h1>
+    <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="/">Linux Game Report</a></h1>
+            </li>
+        </ul>
+    </nav>
     {% block body %}{% endblock %}
+    <script src="/static/js/foundation.min.js" />
+    <script>
+        $(document).foundation();
+    </script>
 </body>
 </html>

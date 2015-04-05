@@ -1,0 +1,9 @@
+/* General CSS overrides */
+
+body {
+    background-color: DarkGrey;
+}
+
+.row {
+    background-color: white;
+}
