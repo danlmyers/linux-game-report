@@ -1,5 +1,5 @@
-# Steam App Check [![Build Status](https://travis-ci.org/moird/steam-app-check.svg)](https://travis-ci.org/moird/steam-app-check)
-Will map out the games you have in steam and report which ones are compatable with linux.
+# Linux Game Report [![Build Status](https://travis-ci.org/moird/linux-game-report.svg)](https://travis-ci.org/moird/linux-game-report)
+Will map out the games you have in steam and report which ones are compatible with linux.
 
 Requires environment:
 
