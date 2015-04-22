@@ -58,3 +58,6 @@ target/
 
 # Heroku Environment
 .env
+
+# Vagrant Files
+.vagrant
